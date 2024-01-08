@@ -1,7 +1,14 @@
 server:
   port: 9191
 
+eureka:
+  client:
+    service-url:
+      defaultZone: https://registry-service.azurewebsites.net/eureka/
+#      defaultZone: http://localhost:8761/eureka/
 
+  instance:
+    preferIpAddress: true
 
 spring:
   application:
@@ -34,11 +41,4 @@ spring:
 
 
 
-eureka:
-  client:
-    service-url:
-#      defaultZone:  https://registry-microservice.herokuapp.com/eureka
-      defaultZone: http://localhost:8761/eureka/
 
-  instance:
-    preferIpAddress: true
